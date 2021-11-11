@@ -1,0 +1,12 @@
+.frame {
+  background: white;
+  border: 12px solid black;
+  padding: 12px;
+  box-shadow: 1px 5px 10px #888888;
+  position: relative;
+
+  img {
+    width: 400px;
+    box-shadow: 1px 5px 10px #888888 inset;
+  }
+}
