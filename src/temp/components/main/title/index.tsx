@@ -1,13 +1,14 @@
 import React from "react";
-import styles from "./title.module.scss";
+import styled from "styled-components";
+import title from "../../../../assets/images/title.png";
+
+const Img = styled.img`
+  max-width: 400px;
+  max-height: 400px;
+  width: 100%;
+  height: 100%;
+`;
 
 export function Title() {
-  return (
-    <div className={styles.container}>
-      <span className={styles.title1}>the</span>
-      <span className={styles.title2}>Clash</span>
-      <span className={styles.title3}>of cats</span>
-      <span className={styles.title4}>NFT</span>
-    </div>
-  );
+  return <Img src={title} alt="the clash of cats nft" />;
 }

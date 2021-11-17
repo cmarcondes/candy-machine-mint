@@ -8,15 +8,17 @@ export function Main() {
   return (
     <div className={styles.container}>
       <div>
-        <Title />
+        <div>
+          <Title />
+        </div>
         <div className={styles.connectWallet}>
-          <WalletDialogButton color="secondary">
+          <WalletDialogButton color="secondary" style={{ height: 50 }}>
             Connect Wallet
           </WalletDialogButton>
         </div>
       </div>
       <div>
-        <Gif />
+        <Gif isHidden />
       </div>
     </div>
   );
