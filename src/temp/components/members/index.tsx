@@ -49,12 +49,10 @@ export function Members({
   members,
   title,
   objective,
-  description,
 }: {
   members: Member[];
   title: string;
   objective: string;
-  description: string;
 }) {
   return (
     <Container>
@@ -62,10 +60,6 @@ export function Members({
       <p>
         <span className="label">Objective:</span>
         {objective}
-      </p>
-      <p>
-        <span className="label">Story:</span>
-        {description}
       </p>
       <Images>
         <ImagesContainer className="part_1">

@@ -33,6 +33,7 @@ export function Contacts() {
 const ContactContainer = styled.div`
   display: flex;
   flex-direction: column;
+  margin-bottom: 20px;
 
   .avatar {
     max-width: 200px;

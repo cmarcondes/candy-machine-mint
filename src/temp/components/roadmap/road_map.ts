@@ -1,6 +1,6 @@
 import generalPng from "../../../assets/images/heads/general.png";
 import guduPng from "../../../assets/images/heads/gudu.png";
-import mikePng from "../../../assets/images/heads/miky_catson.png";
+import mikePng from "../../../assets/images/heads/mike_catson.png";
 import universePng from "../../../assets/images/heads/mr_universe.png";
 import solanoPng from "../../../assets/images/heads/solano.png";
 

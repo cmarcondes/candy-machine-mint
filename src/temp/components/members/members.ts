@@ -5,7 +5,7 @@ import specter from "../../../assets/images/specter.jpg";
 import thunderstorm from "../../../assets/images/thunderstorm.jpg";
 import apolloXII from "../../../assets/images/apollo_xii.jpg";
 import generalPinkKryptonite from "../../../assets/images/general_pink_kryptonite.jpg";
-import mykeCatson from "../../../assets/images/myke_catson.jpg";
+import mykeCatson from "../../../assets/images/mike_catson.jpg";
 import pumpkinHallucination from "../../../assets/images/pumpkin_hallucination.jpg";
 import justPlain from "../../../assets/images/just_plain.jpg";
 import solano from "../../../assets/images/solano.jpg";
