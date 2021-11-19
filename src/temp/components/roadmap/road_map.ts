@@ -7,32 +7,27 @@ import solanoPng from "../../../assets/images/heads/solano.png";
 export const roadMap = [
   {
     etapa: "Open sales",
-    description:
-      "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using",
+    description: "TBD",
     image: generalPng,
   },
   {
     etapa: "25%",
-    description:
-      "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using",
+    description: "TBD",
     image: guduPng,
   },
   {
     etapa: "50%",
-    description:
-      "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using",
+    description: "TBD",
     image: mikePng,
   },
   {
     etapa: "75%",
-    description:
-      "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using",
+    description: "TBD",
     image: universePng,
   },
   {
     etapa: "100%",
-    description:
-      "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using",
+    description: "TBD",
     image: solanoPng,
   },
 ];
