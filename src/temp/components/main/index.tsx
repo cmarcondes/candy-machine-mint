@@ -1,4 +1,4 @@
-import { WalletDialogButton } from "@solana/wallet-adapter-material-ui";
+// import { WalletDialogButton } from "@solana/wallet-adapter-material-ui";
 import React from "react";
 import { Gif } from "./gif";
 import styles from "./main.module.scss";
@@ -11,11 +11,11 @@ export function Main() {
         <div>
           <Title />
         </div>
-        <div className={styles.connectWallet}>
+        {/* <div className={styles.connectWallet}>
           <WalletDialogButton color="secondary" style={{ height: 50 }}>
             Connect Wallet
           </WalletDialogButton>
-        </div>
+        </div> */}
       </div>
       <div>
         <Gif isHidden />

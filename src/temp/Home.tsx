@@ -14,13 +14,12 @@ import { Intro } from "./components/intro";
 export function Home() {
   return (
     <>
-      {/* <Header /> */}
       <Spacer />
       <Main />
       <Spacer />
       <Intro />
       <Spacer />
-      <h2 style={{ textAlign: "center" }}>Meet the gangs</h2>
+      <h1 style={{ textAlign: "center" }}>Meet the gangs</h1>
       <Members
         members={membersTheGuardians}
         title="The Guardians"

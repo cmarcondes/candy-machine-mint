@@ -57,6 +57,10 @@ const ContactContainer = styled.div`
       margin-right: 6px;
     }
   }
+
+  .position {
+    font-weight: 300;
+  }
 `;
 
 function Contact({ contact }: { contact: typeof contacts[0] }) {
@@ -71,7 +75,7 @@ function Contact({ contact }: { contact: typeof contacts[0] }) {
           </a>
         )}
       </div>
-      <span>{contact.position}</span>
+      <span className="position">{contact.position}</span>
     </ContactContainer>
   );
 }
