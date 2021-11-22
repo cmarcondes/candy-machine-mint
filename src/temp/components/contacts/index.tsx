@@ -18,7 +18,7 @@ const TeamContainer = styled.div`
 
 export function Contacts() {
   return (
-    <Container>
+    <Container className="main_container">
       <h1>Team</h1>
       <Spacer />
       <TeamContainer>
@@ -59,7 +59,7 @@ const ContactContainer = styled.div`
   }
 
   .position {
-    font-weight: 300;
+    font-weight: 100;
   }
 `;
 

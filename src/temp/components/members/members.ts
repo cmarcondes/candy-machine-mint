@@ -19,6 +19,7 @@ export const membersTheGuardians: Member[] = [
     image: captainGudu,
     type: "Ultra-rare",
     hidden: true,
+    mainColor: "#e38510",
   },
   {
     name: "Thunderstorm",
@@ -26,20 +27,23 @@ export const membersTheGuardians: Member[] = [
     image: thunderstorm,
     type: "Rare",
     hidden: true,
-  },
-  {
-    name: "Apollo XII",
-    description: "bla bla",
-    image: apolloXII,
-    type: "Rare",
-    hidden: true,
+    mainColor: "#3d5367",
   },
   {
     name: "Mr Universe",
     description: "bla bla",
     image: mrUniverse,
+    type: "Rare",
+    hidden: true,
+    mainColor: "#e08be4",
+  },
+  {
+    name: "Apollo XII",
+    description: "bla bla",
+    image: apolloXII,
     type: "Common",
     hidden: true,
+    mainColor: "#9d8c00",
   },
   {
     name: "Just Plain",
@@ -47,6 +51,7 @@ export const membersTheGuardians: Member[] = [
     image: justPlain,
     type: "Common",
     hidden: true,
+    mainColor: "#404040",
   },
   {
     name: "Specter",
@@ -54,6 +59,7 @@ export const membersTheGuardians: Member[] = [
     image: specter,
     type: "Common",
     hidden: true,
+    mainColor: "#ffffff",
   },
 ];
 export const membersThePunishers: Member[] = [
@@ -63,6 +69,7 @@ export const membersThePunishers: Member[] = [
     image: generalPinkKryptonite,
     type: "Ultra-rare",
     hidden: true,
+    mainColor: "#ff58c1",
   },
   {
     name: "Mike Catson",
@@ -70,13 +77,15 @@ export const membersThePunishers: Member[] = [
     image: mykeCatson,
     type: "Rare",
     hidden: true,
+    mainColor: "#ffd47f",
   },
   {
-    name: "Pumpkin Hallucination",
+    name: "Hallucination",
     description: "bla bla",
     image: pumpkinHallucination,
     type: "Rare",
     hidden: true,
+    mainColor: "#ad76a5",
   },
   {
     name: "Anubys",
@@ -84,6 +93,7 @@ export const membersThePunishers: Member[] = [
     image: anubys,
     type: "Common",
     hidden: true,
+    mainColor: "#b35b2d",
   },
   {
     name: "Solano",
@@ -91,6 +101,7 @@ export const membersThePunishers: Member[] = [
     image: solano,
     type: "Common",
     hidden: true,
+    mainColor: "#56aba9",
   },
   {
     name: "Dr Cal",
@@ -98,5 +109,6 @@ export const membersThePunishers: Member[] = [
     image: drCal,
     type: "Common",
     hidden: true,
+    mainColor: "#2e2e2e",
   },
 ];

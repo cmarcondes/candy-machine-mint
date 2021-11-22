@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { Member } from "./types";
 import hiddenImg from "../../../assets/images/hidden_img.jpeg";
 
-const StyledCard = styled.div`
+const StyledCard = styled.div<{ mainColor: string }>`
   flex: 1;
   transition: all 1s ease-in-out;
   height: 300px;
@@ -24,6 +24,7 @@ const StyledCard = styled.div`
     left: 0;
     font-size: 1em;
     white-space: nowrap;
+    border-top: 2px solid ${(props) => props.mainColor};
   }
 
   .card__head-rarity {
@@ -66,7 +67,7 @@ export function Card({
   className?: string;
 }) {
   return (
-    <StyledCard className={className}>
+    <StyledCard className={className} mainColor={member.mainColor}>
       <img src={member.hidden ? hiddenImg : member.image} alt={member.name} />
       <div className="card__head">
         <div>{member.name}</div>

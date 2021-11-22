@@ -6,7 +6,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 20px;
+  margin: 0 20px;
   h1 {
     text-align: center;
   }
@@ -39,6 +39,7 @@ const DescriptionContainer = styled.div`
   user-select: none;
   p {
     margin: 0;
+    font-weight: 100;
   }
 
   .etapa {

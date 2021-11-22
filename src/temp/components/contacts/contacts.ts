@@ -3,7 +3,7 @@ import hiddenImg from "../../../assets/images/hidden_img.jpeg";
 export const contacts = [
   {
     name: "Cauê",
-    twitter: "https://twitter.com/cauemarcondes",
+    twitter: undefined,
     position: "Developer & Artist",
     image: hiddenImg,
   },

@@ -4,4 +4,5 @@ export interface Member {
   image: string;
   type: "Common" | "Rare" | "Ultra-rare";
   hidden: boolean;
+  mainColor: string;
 }

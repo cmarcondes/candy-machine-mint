@@ -2,8 +2,14 @@ import React from "react";
 import styled from "styled-components";
 
 const Container = styled.div`
+  margin: 0 20px;
   h1 {
     text-align: center;
+    margin-bottom: 24px;
+  }
+
+  p {
+    font-size: 20px;
   }
 `;
 
@@ -11,16 +17,12 @@ export function Intro() {
   return (
     <Container>
       <h1>Intro</h1>
+      <p>10K unique images handcrafted, on the Solana network.</p>
       <p>
-        Captain Gudu and his brother General Pink-Kriptonite were adopted when
-        they were days old by a rich family living in the best neighborhood in
-        town with the best comfort they could ever ask for. One night, General
-        Pink-Kryptonite escaped to explore the city but when tried to get back
-        home the gates were locked. He felt betrayed and his anger and fury
-        started to grow. His goal is now to extinguish the human race but that’s
-        not what Captain Gudu wants. To protect humans and keep them feeding,
-        petting and taking care of the cats, Captain Gudu now leads The
-        Guardians gang in order to protect those who always protected them.
+        Captain Gudu was adopted by a rich family and is living a good life, but
+        his brother General Pink-Kryptonite was left behind. He feels betrayed
+        by humans and now wants revenge. The Guardians and The Punishers are
+        born. Pick your side!
       </p>
     </Container>
   );

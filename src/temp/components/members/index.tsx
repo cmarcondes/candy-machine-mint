@@ -7,7 +7,7 @@ const Container = styled.div`
   margin: 20px 0;
   h4 {
     margin-bottom: 20px;
-    text-decoration: underline;
+    font-size: 26px;
   }
 
   @media only screen and (max-width: 1200px), {
@@ -54,7 +54,7 @@ export function Members({
 }) {
   return (
     <Container>
-      <h4>{title}</h4>
+      <h4>{title}:</h4>
       <Images>
         <ImagesContainer className="part_1">
           {members.slice(0, 3).map((member) => {

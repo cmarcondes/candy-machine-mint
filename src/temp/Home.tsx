@@ -8,25 +8,56 @@ import {
   membersTheGuardians,
   membersThePunishers,
 } from "./components/members/members";
-import { Spacer } from "./components/spacer";
 import { Intro } from "./components/intro";
 
 export function Home() {
   return (
     <>
-      <Spacer />
-      <Main />
-      <Spacer />
-      <Intro />
-      <Spacer />
-      <h1 style={{ textAlign: "center" }}>Meet the gangs</h1>
-      <Members members={membersTheGuardians} title="The Guardians" />
-      <Members members={membersThePunishers} title="The Punishers" />
-      <Spacer />
-      <RoadMap />
-      <Spacer />
-      <Contacts />
-      <Spacer />
+      <div
+        style={{
+          backgroundColor: "#c42029",
+          paddingTop: 50,
+          paddingBottom: 32,
+        }}
+      >
+        <Main />
+      </div>
+      <div
+        style={{ marginTop: 24, marginBottom: 32 }}
+        className="main_container"
+      >
+        <Intro />
+      </div>
+
+      <div
+        style={{
+          backgroundColor: "#2a4760",
+          paddingTop: 24,
+          paddingBottom: 32,
+        }}
+      >
+        <div className="main_container">
+          <h1 style={{ textAlign: "center" }}>Meet the gangs</h1>
+          <Members members={membersTheGuardians} title="The Guardians" />
+          <Members members={membersThePunishers} title="The Punishers" />
+        </div>
+      </div>
+
+      <div
+        className="main_container"
+        style={{ marginTop: 24, marginBottom: 32 }}
+      >
+        <RoadMap />
+      </div>
+      <div
+        style={{
+          backgroundColor: "#c42029",
+          paddingTop: 24,
+          paddingBottom: 32,
+        }}
+      >
+        <Contacts />
+      </div>
     </>
   );
 }
