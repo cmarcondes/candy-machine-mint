@@ -20,16 +20,8 @@ export function Home() {
       <Intro />
       <Spacer />
       <h1 style={{ textAlign: "center" }}>Meet the gangs</h1>
-      <Members
-        members={membersTheGuardians}
-        title="The Guardians"
-        objective="Save human life and keep them as their slaves."
-      />
-      <Members
-        members={membersThePunishers}
-        title="The Punishers"
-        objective="Extinguish human life for betraying them."
-      />
+      <Members members={membersTheGuardians} title="The Guardians" />
+      <Members members={membersThePunishers} title="The Punishers" />
       <Spacer />
       <RoadMap />
       <Spacer />

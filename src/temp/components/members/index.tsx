@@ -48,19 +48,13 @@ const ImagesContainer = styled.div`
 export function Members({
   members,
   title,
-  objective,
 }: {
   members: Member[];
   title: string;
-  objective: string;
 }) {
   return (
     <Container>
       <h4>{title}</h4>
-      <p>
-        <span className="label">Objective:</span>
-        {objective}
-      </p>
       <Images>
         <ImagesContainer className="part_1">
           {members.slice(0, 3).map((member) => {
