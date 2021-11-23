@@ -9,7 +9,8 @@ const Container = styled.div`
   }
 
   p {
-    font-size: 20px;
+    font-size: 24px;
+    font-weight: 100;
   }
 `;
 
@@ -17,7 +18,7 @@ export function Intro() {
   return (
     <Container>
       <h1>Intro</h1>
-      <p>10K unique images handcrafted, on the Solana network.</p>
+      <p>10K unique handcrafted images, on the Solana network.</p>
       <p>
         Captain Gudu was adopted by a rich family and is living a good life, but
         his brother General Pink-Kryptonite was left behind. He feels betrayed
