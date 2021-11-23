@@ -11,6 +11,7 @@ const Container = styled.div`
   p {
     font-size: 24px;
     font-weight: 100;
+    text-align: center;
   }
 `;
 
