@@ -1,15 +1,15 @@
-import captainGudu from "../../../assets/images/captain_gudu.jpg";
-import anubys from "../../../assets/images/anubys.jpg";
-import mrUniverse from "../../../assets/images/mr_universe.jpg";
-import specter from "../../../assets/images/specter.jpg";
-import thunderstorm from "../../../assets/images/thunderstorm.jpg";
-import apolloXII from "../../../assets/images/apollo_xii.jpg";
-import generalPinkKryptonite from "../../../assets/images/general_pink_kryptonite.jpg";
-import mykeCatson from "../../../assets/images/mike_catson.jpg";
-import pumpkinHallucination from "../../../assets/images/pumpkin_hallucination.jpg";
-import justPlain from "../../../assets/images/just_plain.jpg";
-import solano from "../../../assets/images/solano.jpg";
-import drCal from "../../../assets/images/dr_cal.jpg";
+import captainGudu from "../../../assets/images/skins/captain_gudu.jpg";
+import anubys from "../../../assets/images/skins/anubys.jpg";
+import mrUniverse from "../../../assets/images/skins/mr_universe.jpg";
+import specter from "../../../assets/images/skins/specter.jpg";
+import thunderstorm from "../../../assets/images/skins/thunderstorm.jpg";
+import apolloXII from "../../../assets/images/skins/apollo_xii.jpg";
+import generalPinkKryptonite from "../../../assets/images/skins/general.jpg";
+import mikeCatson from "../../../assets/images/skins/mike_catson.jpg";
+import hallucination from "../../../assets/images/skins/hallucination.jpg";
+import justPlain from "../../../assets/images/skins/just_plain.jpg";
+import solano from "../../../assets/images/skins/solano.jpg";
+import drCal from "../../../assets/images/skins/dr_cal.jpg";
 import { Member } from "./types";
 
 export const membersTheGuardians: Member[] = [
@@ -18,15 +18,15 @@ export const membersTheGuardians: Member[] = [
     description: "bla bla",
     image: captainGudu,
     type: "Ultra-rare",
-    hidden: true,
+    hidden: false,
     mainColor: "#e38510",
   },
   {
     name: "Thunderstorm",
     description: "bla bla",
     image: thunderstorm,
-    type: "Rare",
-    hidden: true,
+    type: "Ultra-rare",
+    hidden: false,
     mainColor: "#3d5367",
   },
   {
@@ -34,15 +34,15 @@ export const membersTheGuardians: Member[] = [
     description: "bla bla",
     image: apolloXII,
     type: "Rare",
-    hidden: true,
-    mainColor: "#9d8c00",
+    hidden: false,
+    mainColor: "#364a8f",
   },
   {
     name: "Mr Universe",
     description: "bla bla",
     image: mrUniverse,
-    type: "Common",
-    hidden: true,
+    type: "Rare",
+    hidden: false,
     mainColor: "#e08be4",
   },
   {
@@ -50,7 +50,7 @@ export const membersTheGuardians: Member[] = [
     description: "bla bla",
     image: justPlain,
     type: "Common",
-    hidden: true,
+    hidden: false,
     mainColor: "#404040",
   },
   {
@@ -58,7 +58,7 @@ export const membersTheGuardians: Member[] = [
     description: "bla bla",
     image: specter,
     type: "Common",
-    hidden: true,
+    hidden: false,
     mainColor: "#ffffff",
   },
 ];
@@ -68,15 +68,15 @@ export const membersThePunishers: Member[] = [
     description: "bla bla",
     image: generalPinkKryptonite,
     type: "Ultra-rare",
-    hidden: true,
+    hidden: false,
     mainColor: "#ff58c1",
   },
   {
     name: "Mike Catson",
     description: "bla bla",
-    image: mykeCatson,
-    type: "Rare",
-    hidden: true,
+    image: mikeCatson,
+    type: "Ultra-rare",
+    hidden: false,
     mainColor: "#ffd47f",
   },
   {
@@ -84,23 +84,23 @@ export const membersThePunishers: Member[] = [
     description: "bla bla",
     image: solano,
     type: "Rare",
-    hidden: true,
+    hidden: false,
     mainColor: "#56aba9",
   },
   {
     name: "Hallucination",
     description: "bla bla",
-    image: pumpkinHallucination,
-    type: "Common",
-    hidden: true,
-    mainColor: "#ad76a5",
+    image: hallucination,
+    type: "Rare",
+    hidden: false,
+    mainColor: "#9d8c00",
   },
   {
     name: "Anubys",
     description: "bla bla",
     image: anubys,
     type: "Common",
-    hidden: true,
+    hidden: false,
     mainColor: "#b35b2d",
   },
   {
@@ -108,7 +108,7 @@ export const membersThePunishers: Member[] = [
     description: "bla bla",
     image: drCal,
     type: "Common",
-    hidden: true,
+    hidden: false,
     mainColor: "#2e2e2e",
   },
 ];
