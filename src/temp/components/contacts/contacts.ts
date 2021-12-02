@@ -2,16 +2,16 @@ import hiddenImg from "../../../assets/images/hidden_img.jpeg";
 
 export const contacts = [
   {
-    name: "Cauê",
+    name: "Meow",
     twitter: undefined,
-    position: "Developer & Artist",
+    position: "Art & Developer",
     image: hiddenImg,
   },
   {
-    name: "Murilo",
+    name: "Amau",
     position: "Marketing & Community",
     image: hiddenImg,
   },
-  { name: "Caroline", position: "Web designer", image: hiddenImg },
-  { name: "Isabella", position: "Finance", image: hiddenImg },
+  { name: "Gudulina", position: "Web designer", image: hiddenImg },
+  { name: "Bella", position: "Finance", image: hiddenImg },
 ];

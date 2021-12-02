@@ -18,6 +18,8 @@ import {
   mintOneToken,
   shortenAddress,
 } from "./candy-machine";
+import { HomeClashOfCats } from "./temp/Home";
+import { start } from "repl";
 
 const ConnectButton = styled(WalletDialogButton)``;
 
@@ -51,7 +53,6 @@ const Home = (props: HomeProps) => {
     message: "",
     severity: undefined,
   });
-
   const [startDate, setStartDate] = useState(new Date(props.startDate));
 
   const wallet = useAnchorWallet();
@@ -167,7 +168,20 @@ const Home = (props: HomeProps) => {
 
   return (
     <main>
-      {wallet && (
+      <HomeClashOfCats
+        wallet={wallet}
+        onMint={onMint}
+        balance={balance}
+        totalItemsAvailable={itemsAvailable}
+        totalItemsRedeemed={itemsRedeemed}
+        totalItemsRemaining={itemsRemaining}
+        isSoldOut={isSoldOut}
+        isMinting={isMinting}
+        isActive={isActive}
+        startDate={startDate}
+        setIsActive={setIsActive}
+      />
+      {/* {wallet && (
         <p>Wallet {shortenAddress(wallet.publicKey.toBase58() || "")}</p>
       )}
 
@@ -206,7 +220,14 @@ const Home = (props: HomeProps) => {
             )}
           </MintButton>
         )}
-      </MintContainer>
+      </MintContainer> */}
+
+      <Countdown
+        date={startDate}
+        onMount={({ completed }) => completed && setIsActive(true)}
+        onComplete={() => setIsActive(true)}
+        renderer={renderCounter}
+      />
 
       <Snackbar
         open={alertState.open}
@@ -230,7 +251,13 @@ interface AlertState {
   severity: "success" | "info" | "warning" | "error" | undefined;
 }
 
-const renderCounter = ({ days, hours, minutes, seconds, completed }: any) => {
+export const renderCounter = ({
+  days,
+  hours,
+  minutes,
+  seconds,
+  completed,
+}: any) => {
   return (
     <CounterText>
       {hours + (days || 0) * 24} hours, {minutes} minutes, {seconds} seconds

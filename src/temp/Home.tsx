@@ -9,8 +9,23 @@ import {
   membersThePunishers,
 } from "./components/members/members";
 import { Intro } from "./components/intro";
+import { AnchorWallet } from "@solana/wallet-adapter-react";
 
-export function Home() {
+export interface Props {
+  onMint: () => void;
+  wallet?: AnchorWallet;
+  balance?: number;
+  totalItemsAvailable: number;
+  totalItemsRedeemed: number;
+  totalItemsRemaining: number;
+  isSoldOut: boolean;
+  isMinting: boolean;
+  isActive: boolean;
+  startDate: Date;
+  setIsActive: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+export function HomeClashOfCats(props: Props) {
   return (
     <>
       <div
@@ -20,7 +35,7 @@ export function Home() {
           paddingBottom: 32,
         }}
       >
-        <Main />
+        <Main {...props} />
       </div>
       <div
         style={{ marginTop: 24, marginBottom: 32 }}
