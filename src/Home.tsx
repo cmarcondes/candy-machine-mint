@@ -1,33 +1,17 @@
+import { Snackbar } from "@material-ui/core";
+import Alert from "@material-ui/lab/Alert";
+import * as anchor from "@project-serum/anchor";
+import { useAnchorWallet } from "@solana/wallet-adapter-react";
+import { LAMPORTS_PER_SOL } from "@solana/web3.js";
 import { useEffect, useState } from "react";
 import styled from "styled-components";
-import Countdown from "react-countdown";
-import { Button, CircularProgress, Snackbar } from "@material-ui/core";
-import Alert from "@material-ui/lab/Alert";
-
-import * as anchor from "@project-serum/anchor";
-
-import { LAMPORTS_PER_SOL } from "@solana/web3.js";
-
-import { useAnchorWallet } from "@solana/wallet-adapter-react";
-import { WalletDialogButton } from "@solana/wallet-adapter-material-ui";
-
 import {
-  CandyMachine,
   awaitTransactionSignatureConfirmation,
+  CandyMachine,
   getCandyMachineState,
   mintOneToken,
-  shortenAddress,
 } from "./candy-machine";
 import { HomeClashOfCats } from "./temp/Home";
-import { start } from "repl";
-
-const ConnectButton = styled(WalletDialogButton)``;
-
-const CounterText = styled.span``; // add your styles here
-
-const MintContainer = styled.div``; // add your styles here
-
-const MintButton = styled(Button)``; // add your styles here
 
 export interface HomeProps {
   candyMachineId: anchor.web3.PublicKey;
@@ -181,53 +165,6 @@ const Home = (props: HomeProps) => {
         startDate={startDate}
         setIsActive={setIsActive}
       />
-      {/* {wallet && (
-        <p>Wallet {shortenAddress(wallet.publicKey.toBase58() || "")}</p>
-      )}
-
-      {wallet && <p>Balance: {(balance || 0).toLocaleString()} SOL</p>}
-
-      {wallet && <p>Total Available: {itemsAvailable}</p>}
-
-      {wallet && <p>Redeemed: {itemsRedeemed}</p>}
-
-      {wallet && <p>Remaining: {itemsRemaining}</p>}
-
-      <MintContainer>
-        {!wallet ? (
-          <ConnectButton>Connect Wallet</ConnectButton>
-        ) : (
-          <MintButton
-            disabled={isSoldOut || isMinting || !isActive}
-            onClick={onMint}
-            variant="contained"
-          >
-            {isSoldOut ? (
-              "SOLD OUT"
-            ) : isActive ? (
-              isMinting ? (
-                <CircularProgress />
-              ) : (
-                "MINT"
-              )
-            ) : (
-              <Countdown
-                date={startDate}
-                onMount={({ completed }) => completed && setIsActive(true)}
-                onComplete={() => setIsActive(true)}
-                renderer={renderCounter}
-              />
-            )}
-          </MintButton>
-        )}
-      </MintContainer> */}
-
-      <Countdown
-        date={startDate}
-        onMount={({ completed }) => completed && setIsActive(true)}
-        onComplete={() => setIsActive(true)}
-        renderer={renderCounter}
-      />
 
       <Snackbar
         open={alertState.open}
@@ -251,6 +188,21 @@ interface AlertState {
   severity: "success" | "info" | "warning" | "error" | undefined;
 }
 
+const Counter = styled.ul`
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+  margin-top: 24px;
+
+  li {
+    margin-right: 20px;
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+`;
+
 export const renderCounter = ({
   days,
   hours,
@@ -259,10 +211,40 @@ export const renderCounter = ({
   completed,
 }: any) => {
   return (
-    <CounterText>
-      {hours + (days || 0) * 24} hours, {minutes} minutes, {seconds} seconds
-    </CounterText>
+    <Counter>
+      <CounterElement label="Days" value={days} />
+      <CounterElement label="Hours" value={hours} />
+      <CounterElement label="Minutes" value={minutes} />
+      <CounterElement label="Seconds" value={seconds} />
+    </Counter>
   );
 };
+
+const StyledCounterElement = styled.li`
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(145, 24, 30);
+  padding: 10px;
+  border-radius: 4px;
+  min-width: 70px;
+
+  .value {
+    text-align: center;
+  }
+
+  .label {
+    text-align: center;
+    font-weight: 100;
+    font-size: 13px;
+  }
+`;
+function CounterElement({ label, value }: { label: string; value: any }) {
+  return (
+    <StyledCounterElement>
+      <span className="value">{value}</span>
+      <span className="label">{label}</span>
+    </StyledCounterElement>
+  );
+}
 
 export default Home;

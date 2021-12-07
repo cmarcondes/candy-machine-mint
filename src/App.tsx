@@ -82,11 +82,6 @@ const App = () => {
     []
   );
 
-  console.log(
-    "### caue ~ startDateSeed",
-    startDateSeed,
-    new Date(startDateSeed)
-  );
   return (
     <ThemeProvider theme={theme}>
       <ConnectionProvider endpoint={endpoint}>
@@ -96,7 +91,7 @@ const App = () => {
               candyMachineId={candyMachineId}
               config={config}
               connection={connection}
-              startDate={startDateSeed}
+              startDate={startDateSeed * 1000}
               treasury={treasury}
               txTimeout={txTimeout}
             />

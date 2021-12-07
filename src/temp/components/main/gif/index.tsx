@@ -1,5 +1,5 @@
 import React from "react";
-import gif from "../../../../assets/images/1.gif";
+import gif from "../../../../assets/images/gif.gif";
 import hiddenGif from "../../../../assets/images/hidden_gif.gif";
 import styles from "./gif.module.scss";
 

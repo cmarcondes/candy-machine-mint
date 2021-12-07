@@ -1,15 +1,13 @@
 // import { WalletDialogButton } from "@solana/wallet-adapter-material-ui";
-import { WalletDialogButton } from "@solana/wallet-adapter-material-ui";
 import React from "react";
 import styled from "styled-components";
-import { shortenAddress } from "../../../candy-machine";
 import { Props } from "../../Home";
 import { Gif } from "./gif";
 import styles from "./main.module.scss";
 import { Title } from "./title";
 import { Button, CircularProgress } from "@material-ui/core";
-import { renderCounter } from "../../../Home";
-import Countdown from "react-countdown";
+// import { renderCounter } from "../../../Home";
+// import Countdown from "react-countdown";
 
 const TitleContainer = styled.div`
   @media only screen and (max-width: 901px) {
@@ -17,7 +15,39 @@ const TitleContainer = styled.div`
   }
 `;
 
-const MintButton = styled(Button)``; // add your styles here
+// const MintContainer = styled.div`
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+// `;
+
+// const MintButton = styled(Button)`
+//   margin: 0 !important;
+//   margin-top: 24px !important;
+//   background-color: #f50057 !important;
+//   color: white !important;
+//   @media only screen and (max-width: 900px) {
+//     margin: 32px 0 !important;
+//   }
+// `;
+
+function getMintButtonLabel({
+  isSoldOut,
+  isMinting,
+}: {
+  isSoldOut: boolean;
+  isMinting: boolean;
+}) {
+  if (isSoldOut) {
+    return "SOLD OUT";
+  }
+
+  if (isMinting) {
+    return <CircularProgress />;
+  }
+
+  return "MINT";
+}
 
 export function Main({
   onMint,
@@ -32,7 +62,6 @@ export function Main({
   startDate,
   setIsActive,
 }: Props) {
-  console.log("### caue ~ isActive", isActive);
   return (
     <div className={`${styles.container} main_container`}>
       <div>
@@ -40,51 +69,36 @@ export function Main({
           <Title />
         </TitleContainer>
 
-        {wallet && (
-          <p>Wallet {shortenAddress(wallet.publicKey.toBase58() || "")}</p>
-        )}
+        <p className={styles.comingSoon}>Coming soon...</p>
 
-        {wallet && <p>Balance: {(balance || 0).toLocaleString()} SOL</p>}
+        {/* <MintContainer>
+          <Countdown
+            className="countdown"
+            date={startDate}
+            onMount={({ completed }) => completed && setIsActive(true)}
+            onComplete={() => setIsActive(true)}
+            renderer={renderCounter}
+          />
 
-        {wallet && <p>Total Available: {totalItemsAvailable}</p>}
-
-        {wallet && <p>Redeemed: {totalItemsRedeemed}</p>}
-
-        {wallet && <p>Remaining: {totalItemsRemaining}</p>}
-
-        {!wallet ? (
-          <div className={styles.connectWallet}>
-            <WalletDialogButton color="secondary" style={{ height: 50 }}>
-              Connect Wallet
-            </WalletDialogButton>
-          </div>
-        ) : (
-          <MintButton
-            disabled={isSoldOut || isMinting || !isActive}
-            onClick={onMint}
-            variant="contained"
-          >
-            {isSoldOut ? (
-              "SOLD OUT"
-            ) : isActive ? (
-              isMinting ? (
-                <CircularProgress />
-              ) : (
-                "MINT"
-              )
-            ) : (
-              <Countdown
-                date={startDate}
-                onMount={({ completed }) => completed && setIsActive(true)}
-                onComplete={() => setIsActive(true)}
-                renderer={renderCounter}
-              />
-            )}
-          </MintButton>
-        )}
+          {!wallet ? (
+            <div className={styles.connectWallet}>
+              <WalletDialogButton color="secondary" style={{ height: 50 }}>
+                Connect Wallet
+              </WalletDialogButton>
+            </div>
+          ) : (
+            <MintButton
+              disabled={isSoldOut || isMinting || !isActive}
+              onClick={onMint}
+              variant="contained"
+            >
+              {getMintButtonLabel({ isSoldOut, isMinting })}
+            </MintButton>
+          )}
+        </MintContainer> */}
       </div>
       <div>
-        <Gif isHidden />
+        <Gif />
       </div>
     </div>
   );

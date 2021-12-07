@@ -58,12 +58,12 @@ export function HomeClashOfCats(props: Props) {
         </div>
       </div>
 
-      <div
+      {/* <div
         className="main_container"
         style={{ marginTop: 24, marginBottom: 32 }}
       >
         <RoadMap />
-      </div>
+      </div> */}
       <div
         style={{
           backgroundColor: "#c42029",
