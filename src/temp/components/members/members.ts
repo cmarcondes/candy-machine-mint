@@ -26,7 +26,7 @@ export const membersTheGuardians: Member[] = [
     description: "bla bla",
     image: thunderstorm,
     type: "Ultra-rare",
-    hidden: false,
+    hidden: true,
     mainColor: "#3d5367",
   },
   {
@@ -34,7 +34,7 @@ export const membersTheGuardians: Member[] = [
     description: "bla bla",
     image: apolloXII,
     type: "Rare",
-    hidden: false,
+    hidden: true,
     mainColor: "#364a8f",
   },
   {
@@ -42,7 +42,7 @@ export const membersTheGuardians: Member[] = [
     description: "bla bla",
     image: mrUniverse,
     type: "Rare",
-    hidden: false,
+    hidden: true,
     mainColor: "#e08be4",
   },
   {
@@ -50,7 +50,7 @@ export const membersTheGuardians: Member[] = [
     description: "bla bla",
     image: justPlain,
     type: "Common",
-    hidden: false,
+    hidden: true,
     mainColor: "#404040",
   },
   {
@@ -58,7 +58,7 @@ export const membersTheGuardians: Member[] = [
     description: "bla bla",
     image: specter,
     type: "Common",
-    hidden: false,
+    hidden: true,
     mainColor: "#ffffff",
   },
 ];
@@ -76,7 +76,7 @@ export const membersThePunishers: Member[] = [
     description: "bla bla",
     image: mikeCatson,
     type: "Ultra-rare",
-    hidden: false,
+    hidden: true,
     mainColor: "#ffd47f",
   },
   {
@@ -84,7 +84,7 @@ export const membersThePunishers: Member[] = [
     description: "bla bla",
     image: solano,
     type: "Rare",
-    hidden: false,
+    hidden: true,
     mainColor: "#56aba9",
   },
   {
@@ -92,7 +92,7 @@ export const membersThePunishers: Member[] = [
     description: "bla bla",
     image: hallucination,
     type: "Rare",
-    hidden: false,
+    hidden: true,
     mainColor: "#9d8c00",
   },
   {
@@ -100,7 +100,7 @@ export const membersThePunishers: Member[] = [
     description: "bla bla",
     image: anubys,
     type: "Common",
-    hidden: false,
+    hidden: true,
     mainColor: "#b35b2d",
   },
   {
@@ -108,7 +108,7 @@ export const membersThePunishers: Member[] = [
     description: "bla bla",
     image: drCal,
     type: "Common",
-    hidden: false,
+    hidden: true,
     mainColor: "#2e2e2e",
   },
 ];

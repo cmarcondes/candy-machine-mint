@@ -1,15 +1,15 @@
 import React from "react";
-// import { Header } from "./components/header";
 import { Main } from "./components/main";
 import { Contacts } from "./components/contacts";
 import { Members } from "./components/members";
-import { RoadMap } from "./components/roadmap";
 import {
   membersTheGuardians,
   membersThePunishers,
 } from "./components/members/members";
 import { Intro } from "./components/intro";
 import { AnchorWallet } from "@solana/wallet-adapter-react";
+import { Header } from "./components/header";
+import { Footer } from "./components/footer";
 
 export interface Props {
   onMint: () => void;
@@ -31,10 +31,11 @@ export function HomeClashOfCats(props: Props) {
       <div
         style={{
           backgroundColor: "#c42029",
-          paddingTop: 50,
+          // paddingTop: 50,
           paddingBottom: 32,
         }}
       >
+        <Header />
         <Main {...props} />
       </div>
       <div
@@ -73,6 +74,7 @@ export function HomeClashOfCats(props: Props) {
       >
         <Contacts />
       </div>
+      <Footer />
     </>
   );
 }
