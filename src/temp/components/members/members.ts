@@ -26,7 +26,7 @@ export const membersTheGuardians: Member[] = [
     description: "bla bla",
     image: thunderstorm,
     type: "Ultra-rare",
-    hidden: true,
+    hidden: false,
     mainColor: "#3d5367",
   },
   {
@@ -34,7 +34,7 @@ export const membersTheGuardians: Member[] = [
     description: "bla bla",
     image: apolloXII,
     type: "Rare",
-    hidden: true,
+    hidden: false,
     mainColor: "#364a8f",
   },
   {
@@ -42,7 +42,7 @@ export const membersTheGuardians: Member[] = [
     description: "bla bla",
     image: mrUniverse,
     type: "Rare",
-    hidden: true,
+    hidden: false,
     mainColor: "#e08be4",
   },
   {
@@ -50,7 +50,7 @@ export const membersTheGuardians: Member[] = [
     description: "bla bla",
     image: justPlain,
     type: "Common",
-    hidden: true,
+    hidden: false,
     mainColor: "#404040",
   },
   {
@@ -76,7 +76,7 @@ export const membersThePunishers: Member[] = [
     description: "bla bla",
     image: mikeCatson,
     type: "Ultra-rare",
-    hidden: true,
+    hidden: false,
     mainColor: "#ffd47f",
   },
   {
@@ -84,7 +84,7 @@ export const membersThePunishers: Member[] = [
     description: "bla bla",
     image: solano,
     type: "Rare",
-    hidden: true,
+    hidden: false,
     mainColor: "#56aba9",
   },
   {
@@ -92,7 +92,7 @@ export const membersThePunishers: Member[] = [
     description: "bla bla",
     image: hallucination,
     type: "Rare",
-    hidden: true,
+    hidden: false,
     mainColor: "#9d8c00",
   },
   {
@@ -100,7 +100,7 @@ export const membersThePunishers: Member[] = [
     description: "bla bla",
     image: anubys,
     type: "Common",
-    hidden: true,
+    hidden: false,
     mainColor: "#b35b2d",
   },
   {
