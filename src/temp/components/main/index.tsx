@@ -1,13 +1,14 @@
-// import { WalletDialogButton } from "@solana/wallet-adapter-material-ui";
-import React from "react";
+import { WalletDialogButton } from "@solana/wallet-adapter-material-ui";
+import React, { useMemo } from "react";
 import styled from "styled-components";
 import { Props } from "../../Home";
 import { Gif } from "./gif";
 import styles from "./main.module.scss";
 import { Title } from "./title";
 import { Button, CircularProgress } from "@material-ui/core";
-// import { renderCounter } from "../../../Home";
-// import Countdown from "react-countdown";
+import { renderCounter } from "../../../Home";
+import Countdown from "react-countdown";
+import { isVIPWallet } from "./vip_wallets";
 
 const TitleContainer = styled.div`
   @media only screen and (max-width: 901px) {
@@ -15,21 +16,21 @@ const TitleContainer = styled.div`
   }
 `;
 
-// const MintContainer = styled.div`
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-// `;
+const MintContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
 
-// const MintButton = styled(Button)`
-//   margin: 0 !important;
-//   margin-top: 24px !important;
-//   background-color: #f50057 !important;
-//   color: white !important;
-//   @media only screen and (max-width: 900px) {
-//     margin: 32px 0 !important;
-//   }
-// `;
+const MintButton = styled(Button)`
+  margin: 0 !important;
+  margin-top: 24px !important;
+  background-color: #f50057 !important;
+  color: white !important;
+  @media only screen and (max-width: 900px) {
+    margin: 32px 0 !important;
+  }
+`;
 
 function getMintButtonLabel({
   isSoldOut,
@@ -62,6 +63,9 @@ export function Main({
   startDate,
   setIsActive,
 }: Props) {
+  const walletId = wallet?.publicKey?.toBase58();
+  const isVIP = useMemo(() => isVIPWallet(walletId), [walletId]);
+
   return (
     <div className={`${styles.container} main_container`}>
       <div>
@@ -69,9 +73,9 @@ export function Main({
           <Title />
         </TitleContainer>
 
-        <p className={styles.comingSoon}>Coming soon...</p>
+        {/* <p className={styles.comingSoon}>Coming soon...</p> */}
 
-        {/* <MintContainer>
+        <MintContainer>
           <Countdown
             className="countdown"
             date={startDate}
@@ -87,15 +91,24 @@ export function Main({
               </WalletDialogButton>
             </div>
           ) : (
-            <MintButton
-              disabled={isSoldOut || isMinting || !isActive}
-              onClick={onMint}
-              variant="contained"
-            >
-              {getMintButtonLabel({ isSoldOut, isMinting })}
-            </MintButton>
+            <>
+              {isVIP ? (
+                <MintButton
+                  disabled={isSoldOut || isMinting || !isActive}
+                  onClick={onMint}
+                  variant="contained"
+                >
+                  {getMintButtonLabel({ isSoldOut, isMinting })}
+                </MintButton>
+              ) : (
+                <div>
+                  You're not a VIP member 😿, hold on, your time to mint is
+                  coming soon...
+                </div>
+              )}
+            </>
           )}
-        </MintContainer> */}
+        </MintContainer>
       </div>
       <div>
         <Gif />
